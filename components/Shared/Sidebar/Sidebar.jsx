@@ -4,13 +4,15 @@ import { sidebarNavLinks } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { MdOutlineWorkspaces } from "react-icons/md";
 
 const Sidebar = () => {
   const pathname = usePathname();
   return (
     <div>
       <div className="w-full flex h-[60px] items-center px-4">
-        <h2 className="text-xl font-semibold">Workflow Automation</h2>
+        <MdOutlineWorkspaces className="text-xl mr-2" />
+        <h2 className="text-xl font-semibold">WA</h2>
       </div>
 
       <div className="p-3">
