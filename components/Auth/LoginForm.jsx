@@ -1,6 +1,6 @@
 "use client";
 
-import { signupSchema } from "@/schema/validationSchema";
+import { loginSchema } from "@/schema/validationSchema";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,11 +12,10 @@ import CustomFormField from "@/components/Form/CustomFormField";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const SignupForm = () => {
+const LoginForm = () => {
   const form = useForm({
-    resolver: zodResolver(signupSchema),
+    resolver: zodResolver(loginSchema),
     defaultValues: {
-      name: "",
       email: "",
       password: "",
     },
@@ -31,20 +30,14 @@ const SignupForm = () => {
 
   return <div className="grid w-full items-center gap-4">
     <div className="flex items-center gap-3.5">
-      <GoogleButton text='Signup with Google' />
-      <GithubButton text='Signup with Github' />
+      <GoogleButton text='Login with Google' />
+      <GithubButton text='Login with Github' />
     </div>
     <Separator />
 
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="flex flex-col space-y-4">
-          <CustomFormField 
-            control={form.control}
-            name={'name'}
-            label={'Name'}
-            placeholder={'Full Name'}
-          />
           <CustomFormField 
             control={form.control}
             name={'email'}
@@ -62,12 +55,12 @@ const SignupForm = () => {
         </div>
         <Button 
           variant="primary"
-          className='mt-5 w-full' disabled={loading}>{loading ? 'Creating Account...' : 'Create an Account'}</Button>
+          className='mt-5 w-full' disabled={loading}>{loading ? 'Signin you in...' : 'Sign in to your  Account'}</Button>
       </form>
     </Form>
 
-    <p className="text-sm font-light text-muted-foreground">Already have an Account? <Link href={'/login'} className="font-medium text-blue-600 hover:underline ml-1">Login here</Link></p>
+    <p className="text-sm font-light text-muted-foreground">Don't have an Account? <Link href={'/register'} className="font-medium text-blue-600 hover:underline ml-1">Signup here</Link></p>
   </div>;
 };
 
-export default SignupForm;
+export default LoginForm;
