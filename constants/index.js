@@ -36,7 +36,7 @@ export const pathInfo = {
 
   integrations: {
     path: "Integrations",
-    subtitle: "Connect Wiza to your favorite tools and gain their power",
+    subtitle: "Connect Workflow Automation to your favorite tools and gain their power",
   },
 };
 
