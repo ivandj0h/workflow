@@ -18,9 +18,9 @@ const LoginPage = () => {
 
       <Card className="w-full rounded-lg shadow border border-input md:mt-0 sm:max-w-[32rem] xl:p-0">
         <CardHeader>
-          <CardTitle>Create an Account</CardTitle>
+          <CardTitle>Sign in into your Account</CardTitle>
           <CardDescription>
-            Let's get started. No credit card needed.
+            It's nice to see you again.
           </CardDescription>
         </CardHeader>
         <CardContent>
