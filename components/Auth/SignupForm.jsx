@@ -9,6 +9,7 @@ import GithubButton from "@/components/Buttons/GithubButton";
 import Separator from "@/components/Common/Separator";
 import { Form } from "@/components/ui/form";
 import CustomFormField from "@/components/Form/CustomFormField";
+import { Button } from "@/components/ui/button";
 
 const SignupForm = () => {
   const form = useForm({
@@ -43,7 +44,24 @@ const SignupForm = () => {
             label={'Name'}
             placeholder={'Full Name'}
           />
+          <CustomFormField 
+            control={form.control}
+            name={'email'}
+            label={'Email'}
+            type="email"
+            placeholder={'Email Address'}
+          />
+          <CustomFormField 
+            control={form.control}
+            name={'password'}
+            label={'Password'}
+            type="password"
+            placeholder={'Password'}
+          />
         </div>
+        <Button 
+          variant="primary"
+          className='mt-5 w-full' disabled={loading}>{loading ? 'Creating Account...' : 'Create an Account'}</Button>
       </form>
     </Form>
   </div>;
