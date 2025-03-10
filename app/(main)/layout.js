@@ -1,5 +1,5 @@
-import Sidebar from "@/components/Shared/Sidebar/Sidebar";
-import Topbar from "@/components/Shared/Topbar/Topbar";
+import Topbar from "../../components/Shared/Topbar/Topbar";
+import Sidebar from "../../components/Shared/Sidebar/Sidebar";
 
 export default async function ProtectedLayout({ children }) {
   return (

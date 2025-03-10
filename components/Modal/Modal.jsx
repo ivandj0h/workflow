@@ -7,6 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import clsx from "clsx";
 
 const Modal = ({ children, trigger, classes, title, description }) => {
   return (

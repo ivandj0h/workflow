@@ -1,15 +1,11 @@
 "use client";
 
 import React from "react";
-import { pathInfo } from "@/constants";
+import { pathInfo } from "../../../constants";
 import { usePathname } from "next/navigation";
 import { Bell } from "lucide-react";
-import { ModeToggle } from "@/components/ThemeSwitcher";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { ModeToggle } from "../../ThemeSwitcher";
+import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -17,9 +13,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+} from "../../ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
+import { Button } from "../../../components/ui/button";
 
 const Topbar = () => {
   const pathname = usePathname();
